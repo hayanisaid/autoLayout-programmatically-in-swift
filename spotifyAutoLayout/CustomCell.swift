@@ -11,8 +11,22 @@ import UIKit
 
 class CustomCell: UICollectionViewCell,UICollectionViewDataSource, UICollectionViewDelegate,UICollectionViewDelegateFlowLayout {
     
-    
-    
+    var section : Section? {
+        didSet{
+           
+            guard let section = self.section else {return}
+            self.titleLabel.text = section.title
+          //  self.playlists = section.playlists
+            self.section?.playlists.forEach({ (item) in
+                let playlist = PlayList(dictionary: item as! [String : Any])
+                self.playlists.append(playlist)
+
+            })
+            self.collectionView.reloadData()
+            
+        }
+    }
+   lazy var playlists = [PlayList]()
     let collectionView : UICollectionView = {
         // init the layout
         let layout = UICollectionViewFlowLayout()
@@ -22,10 +36,10 @@ class CustomCell: UICollectionViewCell,UICollectionViewDataSource, UICollectionV
         // the instance of collectionView
         
         let cv = UICollectionView(frame: .zero, collectionViewLayout: layout)
-        cv.backgroundColor = .purple
+       // cv.backgroundColor = .purple
        
         // get the collection view a  backgroundColor
-      
+         
         cv.translatesAutoresizingMaskIntoConstraints = false
         
         return cv
@@ -35,20 +49,20 @@ class CustomCell: UICollectionViewCell,UICollectionViewDataSource, UICollectionV
     
     let cellId : String = "subCellID"
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-       return  4
+        return  self.playlists.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath)
-         cell.backgroundColor = .yellow
-        
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath) as! SubCustomCell
+        // cell.backgroundColor = .yellow
+        cell.playlist = playlists[indexPath.item]
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         
-        let width = frame.height
-        let height = frame.height
+        let width = frame.height / 2
+        let height = frame.height / 2
         
         return CGSize(width: width, height: height)
         
@@ -69,10 +83,12 @@ class CustomCell: UICollectionViewCell,UICollectionViewDataSource, UICollectionV
         
         titleLabel.topAnchor.constraint(equalTo: topAnchor, constant: 8).isActive = true
         titleLabel.leftAnchor.constraint(equalTo: leftAnchor,constant: 8 ).isActive = true
+        //titleLabel.bottomAnchor.constraint
+        
     
        
        setupSubCells()
-        collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: cellId)
+        collectionView.register(SubCustomCell.self, forCellWithReuseIdentifier: cellId)
         
     }
     
@@ -86,7 +102,7 @@ class CustomCell: UICollectionViewCell,UICollectionViewDataSource, UICollectionV
         collectionView.delegate = self
         // setup constrainst
         // make it fit all the space of the CustomCell
-        collectionView.topAnchor.constraint(equalTo: titleLabel.bottomAnchor).isActive = true
+        collectionView.topAnchor.constraint(equalTo: titleLabel.bottomAnchor,constant: 15).isActive = true
         collectionView.leftAnchor.constraint(equalTo: leftAnchor).isActive = true
         collectionView.bottomAnchor.constraint(equalTo: bottomAnchor).isActive = true
         collectionView.rightAnchor.constraint(equalTo: rightAnchor).isActive = true

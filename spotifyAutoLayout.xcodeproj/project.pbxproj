@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		84079069239A360C003EBB50 /* data.json in Resources */ = {isa = PBXBuildFile; fileRef = 84079068239A360C003EBB50 /* data.json */; };
+		8407906B239A37E2003EBB50 /* playlist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8407906A239A37E2003EBB50 /* playlist.swift */; };
+		8407906D239A392C003EBB50 /* Section.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8407906C239A392C003EBB50 /* Section.swift */; };
 		8426481B236BADFA00324CB9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8426481A236BADFA00324CB9 /* AppDelegate.swift */; };
 		8426481D236BADFA00324CB9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8426481C236BADFA00324CB9 /* ViewController.swift */; };
 		84264820236BADFA00324CB9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8426481E236BADFA00324CB9 /* Main.storyboard */; };
@@ -15,6 +18,7 @@
 		84264830236BADFD00324CB9 /* spotifyAutoLayoutTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8426482F236BADFD00324CB9 /* spotifyAutoLayoutTests.swift */; };
 		8426483B236BADFD00324CB9 /* spotifyAutoLayoutUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8426483A236BADFD00324CB9 /* spotifyAutoLayoutUITests.swift */; };
 		84264849236BE36E00324CB9 /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84264848236BE36E00324CB9 /* CustomCell.swift */; };
+		84B37EB123963112002F20B3 /* SubCustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B37EB023963112002F20B3 /* SubCustomCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +39,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		84079068239A360C003EBB50 /* data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = data.json; sourceTree = "<group>"; };
+		8407906A239A37E2003EBB50 /* playlist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = playlist.swift; sourceTree = "<group>"; };
+		8407906C239A392C003EBB50 /* Section.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Section.swift; sourceTree = "<group>"; };
 		84264817236BADFA00324CB9 /* spotifyAutoLayout.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = spotifyAutoLayout.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8426481A236BADFA00324CB9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8426481C236BADFA00324CB9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -49,6 +56,7 @@
 		8426483A236BADFD00324CB9 /* spotifyAutoLayoutUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = spotifyAutoLayoutUITests.swift; sourceTree = "<group>"; };
 		8426483C236BADFD00324CB9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		84264848236BE36E00324CB9 /* CustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
+		84B37EB023963112002F20B3 /* SubCustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubCustomCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +107,7 @@
 		84264819236BADFA00324CB9 /* spotifyAutoLayout */ = {
 			isa = PBXGroup;
 			children = (
+				84079068239A360C003EBB50 /* data.json */,
 				8426481A236BADFA00324CB9 /* AppDelegate.swift */,
 				8426481C236BADFA00324CB9 /* ViewController.swift */,
 				8426481E236BADFA00324CB9 /* Main.storyboard */,
@@ -106,6 +115,9 @@
 				84264823236BADFD00324CB9 /* LaunchScreen.storyboard */,
 				84264826236BADFD00324CB9 /* Info.plist */,
 				84264848236BE36E00324CB9 /* CustomCell.swift */,
+				84B37EB023963112002F20B3 /* SubCustomCell.swift */,
+				8407906A239A37E2003EBB50 /* playlist.swift */,
+				8407906C239A392C003EBB50 /* Section.swift */,
 			);
 			path = spotifyAutoLayout;
 			sourceTree = "<group>";
@@ -233,6 +245,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				84264825236BADFD00324CB9 /* LaunchScreen.storyboard in Resources */,
+				84079069239A360C003EBB50 /* data.json in Resources */,
 				84264822236BADFD00324CB9 /* Assets.xcassets in Resources */,
 				84264820236BADFA00324CB9 /* Main.storyboard in Resources */,
 			);
@@ -262,6 +275,9 @@
 				8426481D236BADFA00324CB9 /* ViewController.swift in Sources */,
 				84264849236BE36E00324CB9 /* CustomCell.swift in Sources */,
 				8426481B236BADFA00324CB9 /* AppDelegate.swift in Sources */,
+				8407906D239A392C003EBB50 /* Section.swift in Sources */,
+				84B37EB123963112002F20B3 /* SubCustomCell.swift in Sources */,
+				8407906B239A37E2003EBB50 /* playlist.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

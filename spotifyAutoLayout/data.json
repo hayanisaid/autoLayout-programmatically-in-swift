@@ -1,0 +1,86 @@
+[
+    {
+        "title":"Just Released",
+        "playlists":[
+        {
+            "title":"Justin Bieber",
+            "image": "image1"
+        },
+        {
+            "title":"Maron 5",
+            "image": "image2"
+        },
+        {
+            "title":"Leo.D",
+            "image": "image3"
+        },
+        {
+            "title":"Halsey",
+            "image": "image4"
+        }
+        ]
+    },
+    {
+           "title":"Fitness",
+           "playlists":[
+           {
+               "title":"DJ Khalid",
+               "image": "image2"
+           },
+           {
+               "title":"Wes Khalifa",
+               "image": "image1"
+           },
+           {
+               "title":"M. Garix",
+               "image": "image5"
+           },
+           {
+               "title":"Chain Smokers",
+               "image": "image6"
+           }
+           ]
+       },
+    {
+           "title":"Music You Like",
+           "playlists":[
+           {
+               "title":"Rock",
+               "image": "image3"
+           },
+           {
+               "title":"R&B Music",
+               "image": "image4"
+           },
+           {
+               "title":"Pop",
+               "image": "image1"
+           },
+           {
+               "title":"Hip-hop",
+               "image": "image5"
+           }
+           ]
+       },
+       {
+              "title":"Favorites",
+              "playlists":[
+              {
+                  "title":"Khalid",
+                  "image": "image2"
+              },
+              {
+                  "title":"Ed sheeran ",
+                  "image": "image3"
+              },
+              {
+                  "title":"Rihana",
+                  "image": "image1"
+              },
+              {
+                  "title":"Bebe Rexa",
+                  "image": "image6"
+              }
+              ]
+          }
+]
